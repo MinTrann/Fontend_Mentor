@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card__image">
+      <img src="./assets/images/illustration-article.svg" alt="">
+    </div>
+    <div class="card__content">
+      <button class="card__btn_learn">Learning</button>
+      <p>Publlished 21 Dec 2003</p>
+      <h2>HTML & CSS foundations</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+      
+    </div>
+    <div class="card__footer">   
+        <img src="./assets/images/image-avatar.webp" alt="">
+     <p>Gard Hooper</p>
+    </div>
+  </div>
+  <script>
+    document.querySelector('.card__btn_learn').addEventListener("click",function (){
+  alert("Comming soon ! 🙃")
+    });
+  </script>
+</body>
+</html>
