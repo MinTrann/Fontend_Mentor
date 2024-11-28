@@ -93,4 +93,6 @@ align-items: center;
 .card__footer img{
     width:28px;
     height: 28px;
+border-radius: 50%;
+
 }
