@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brow-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+body {
+  padding: 50px 0;
+  transition: 0.2s linear !important;
+  background: var(--rose-50);
+}
+hr {
+  border: 1px solid var(--stone-150);
+}
+p {
+  font-size: 16px;
+}
+.container {
+  background: var(--white);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.container .image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.container .image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.container .image:hover img {
+  transform: scale(1.1);
+}
+.container .title h1 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 15px 0;
+}
+.container p {
+  font-family: "Outfit", serif;
+  color: var(--stone-600);
+  font-size: 14px;
+}
+.container .pre-time {
+  margin-top: 20px;
+  background: var(--rose-50);
+  border-radius: 14px;
+  padding: 20px;
+}
+.container .pre-time h3 {
+  color: var(--rose-800);
+  font-family: "Outfit", serif;
+  font-size: 16px;
+}
+ul li::marker {
+  color: var(--rose-800);
+}
+ol li::marker {
+  color: var(--rose-800);
+  font-weight: 600;
+}
+.container .pre-time ul {
+  padding-left: 20px;
+}
+.container .pre-time ul li {
+  padding: 8px 0;
+  font-family: "Outfit", serif;
+}
+.container .pre-time ul li span {
+  color: var(--stone-600);
+  font-size: 14px;
+}
+.container .pre-time ul li b {
+  font-size: 14px;
+  margin-left: 5px;
+  color: var(--stone-900);
+}
+
+.container .ingredients {
+  padding: 25px 0;
+}
+.container .ingredients h2 {
+  font-family: "Young Serif", serif;
+  color: var(--brow-800);
+  font-style: normal;
+}
+.container .ingredients ul {
+  padding: 10px 20px;
+}
+.container .ingredients ul li {
+  padding: 5px 0;
+  color: var(--stone-600);
+  font-size: 14px;
+  font-family: "Outfit", serif;
+}
+
+.container .instrutions {
+  padding: 25px 0;
+}
+.container .instrutions h2 {
+  font-family: "Young Serif", serif;
+  color: var(--brow-800);
+  font-style: normal;
+}
+.container .instrutions ol {
+  padding: 10px 20px;
+  font-family: "Outfit", serif;
+}
+.container .instrutions ol li {
+  padding: 5px 0;
+}
+.container .instrutions ol li span {
+  color: var(--stone-600);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.container .instrutions ol li b {
+  color: var(--stone-900);
+  margin-left: 5px;
+}
+
+.container .nutrition {
+  padding: 25px 0;
+}
+.container .nutrition h2 {
+  font-family: "Young Serif", serif;
+  color: var(--brow-800);
+  font-style: normal;
+}
+.container .nutrition > p {
+  padding: 10px;
+}
+.container .nutrition .row {
+  display: flex;
+  padding: 10px 20px;
+}
+.container .nutrition .col-one {
+  width: 50%;
+}
+.container .nutrition .col-one p {
+  font-weight: 500;
+  color: var(--stone-600);
+}
+.container .nutrition .col-two p {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--brow-800);
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 0;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .container .title h1 {
+    font-size: 24px;
+  }
+
+  .container p {
+    font-size: 12px;
+  }
+
+  .container .pre-time h3 {
+    font-size: 14px;
+  }
+
+  .container .ingredients h2,
+  .container .instrutions h2,
+  .container .nutrition h2 {
+    font-size: 18px;
+  }
+
+  .container .ingredients ul li,
+  .container .instrutions ol li,
+  .container .nutrition .col-one p {
+    font-size: 12px;
+  }
+
+  .container .nutrition .col-two p {
+    font-size: 12px;
+  }
+
+  .container .pre-time ul {
+    padding-left: 10px;
+  }
+}
