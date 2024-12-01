@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 28%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --dark-blue: hsl(288, 12%, 48%);
+  --grayish-blue: hsl(228, 12%, 48%);
+}
+p {
+  font-size: 14px;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    border-radius: 12px;
+    overflow: hidden;    
+    
+}
+.card .image-product{
+flex: 1;
+}
+.card .image-product img {
+    width: 100%;
+    height: 100% ;
+    object-fit:cover;
+}
+.card .content{
+    flex: 1;
+    background: var(--white);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* height: fit-content; */
+}
+.card .content h2{
+    font-family: "Montserrat", serif;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark-blue);
+}
+
+.card .content .title h1{
+    font-family: 'Fraunces', serif;
+    font-size: 44px;
+
+}
+.card .content .description{
+    width: 80%
+}
+.card .content .description p{
+    font-size: 16px;
+    color: var(--dark-blue);
+    line-height: 1.6;
+    font-weight: 500;
+    font-family: "Montserrat", serif;
+}
+.card .content .price p{
+   
+    position: relative;
+    color: var(--dark-cyan);
+    font-size: 32px;
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+}
+.card .content .price p span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: line-through;
+    font-family: "Montserrat", serif;
+    color: var(--dark-blue);
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.btn{
+    width: 100%;
+    font-family: "Montserrat", serif;
+    font-weight: bold;
+    color: var(--white);
+    background: var(--dark-cyan);
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+ .btn:hover{
+    color: black;
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+}
+
+@media (min-width: 376px) {
+    .card .image-product img {
+        content: url(/FontEnd-Mentor/Fontend_Mentor/product-preview-card-component-main/images/image-product-desktop.jpg); /* Thay đổi đường dẫn đến hình ảnh desktop gốc */
+        height: 100%;
+        object-fit: cover;
+    }
+}
+@media (max-width: 375px) {
+    body {
+        height: auto;
+        padding: 20px 10px;  
+    }
+
+    .card {
+        flex-direction: column;  
+        width: 100%;  
+    }
+    .card .image-product{
+        width: 100%;
+      max-height: 250px;
+      overflow: hidden;
+    }
+    .card .image-product img {
+        content: url(/FontEnd-Mentor/Fontend_Mentor/product-preview-card-component-main/images/image-product-mobile.jpg);
+        height: 100%;  
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .card .content {
+        padding: 20px;  
+        
+    }
+
+    .card .content h2 {
+        font-size: 14px;  
+    }
+
+    .card .content .title h1 {
+        font-size: 28px;  
+    }
+
+    .card .content .description p {
+        font-size: 14px; 
+    }
+
+    .card .content .price p {
+        font-size: 24px;  
+    }
+
+    .btn {
+        font-weight: 500;
+        padding: 10px 20px; 
+        font-size: 14px;  
+    }
+}
